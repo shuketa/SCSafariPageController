@@ -48,7 +48,7 @@
 	[self.pageViewController.view setFrame:self.view.bounds];
 	[self.pageViewController didMoveToParentViewController:self];
 	
-	[self.pageViewController setScrollEnabled:NO];
+	//[self.pageViewController setScrollEnabled:NO];
 	[self.pageViewController setPagingEnabled:NO];
 	[self.pageViewController setContinuousNavigationEnabled:YES];
 	[self.pageViewController setAnimationDuration:0.35f];
@@ -64,7 +64,7 @@
 	
 	self.isZoomedOut = YES;
 	[self.pageViewController setLayouter:self.zoomedOutLayouter animated:animated completion:completion];
-	[self.pageViewController setScrollEnabled:YES];
+	//[self.pageViewController setScrollEnabled:YES];
 	
 	for(SCSafariPageWrapperViewController *page in self.pageViewController.loadedViewControllers) {
 		[page setScrollEnabled:YES];
@@ -81,7 +81,7 @@
 	self.currentPage = index;
 	
 	[self.pageViewController setLayouter:self.zoomedInLayouter andFocusOnIndex:index animated:animated completion:completion];
-	[self.pageViewController setScrollEnabled:NO];
+	//[self.pageViewController setScrollEnabled:NO];
 	
 	for(SCSafariPageWrapperViewController *page in self.pageViewController.loadedViewControllers) {
 		[page setScrollEnabled:NO];
